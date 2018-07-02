@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.irctc.login.Login">
+      <class name="com.irctc.login.Registration">
         <methods>
           <include name="login"/>
           <include name="getDriver"/>
           <include name="openBrowser"/>
         </methods>
-      </class> <!-- com.irctc.login.Login -->
+      </class> <!-- com.irctc.login.Registration -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
