@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="7384" started-at="2018-06-28T13:46:59Z" finished-at="2018-06-28T13:47:06Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="7384" started-at="2018-06-28T13:46:59Z" finished-at="2018-06-28T13:47:06Z">
+      <class name="com.irctc.login.Registration">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.irctc.login.Registration@4439f31e]" name="getDriver" is-config="true" duration-ms="2889" started-at="2018-06-28T19:16:56Z" finished-at="2018-06-28T19:16:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.irctc.login.Registration@4439f31e]" name="openBrowser" is-config="true" duration-ms="7369" started-at="2018-06-28T19:16:59Z" finished-at="2018-06-28T19:17:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.irctc.login.Registration@4439f31e]" name="login" duration-ms="4" started-at="2018-06-28T19:17:06Z" finished-at="2018-06-28T19:17:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="register()[pri:0, instance:com.irctc.login.Registration@4439f31e]" name="register" duration-ms="1" started-at="2018-06-28T19:17:06Z" finished-at="2018-06-28T19:17:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+      </class> <!-- com.irctc.login.Registration -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
