@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="6" ignored="2" total="13" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7715" started-at="2018-07-02T13:14:57Z" finished-at="2018-07-02T13:15:05Z">
+  <suite name="Suite" duration-ms="16937" started-at="2018-07-04T13:56:34Z" finished-at="2018-07-04T13:56:51Z">
     <groups>
+      <group name="T1">
+        <method signature="Login.login()[pri:1, instance:com.gmail.logout.Logout@396a51ab]" name="login" class="com.gmail.login.Login"/>
+        <method signature="Login.login()[pri:1, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="login" class="com.gmail.login.Login"/>
+        <method signature="Logout.logout()[pri:6, instance:com.gmail.logout.Logout@396a51ab]" name="logout" class="com.gmail.logout.Logout"/>
+        <method signature="SendMail.composeMailAttachment()[pri:4, instance:com.gmail.logout.Logout@396a51ab]" name="composeMailAttachment" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.composeMailAttachment()[pri:4, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="composeMailAttachment" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.composeMailBtnClick()[pri:2, instance:com.gmail.logout.Logout@396a51ab]" name="composeMailBtnClick" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.composeMailBtnClick()[pri:2, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="composeMailBtnClick" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.composeToFrom()[pri:3, instance:com.gmail.logout.Logout@396a51ab]" name="composeToFrom" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.composeToFrom()[pri:3, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="composeToFrom" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.sendMail()[pri:5, instance:com.gmail.logout.Logout@396a51ab]" name="sendMail" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.sendMail()[pri:5, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="sendMail" class="com.gmail.mail.SendMail"/>
+      </group> <!-- T1 -->
     </groups>
-    <test name="Default test" duration-ms="7715" started-at="2018-07-02T13:14:57Z" finished-at="2018-07-02T13:15:05Z">
-      <class name="com.irctc.login.Registration">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.irctc.login.Registration@4439f31e]" name="getDriver" is-config="true" duration-ms="2719" started-at="2018-07-02T18:44:55Z" finished-at="2018-07-02T18:44:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.irctc.login.Registration@4439f31e]" name="openBrowser" is-config="true" duration-ms="4403" started-at="2018-07-02T18:44:57Z" finished-at="2018-07-02T18:45:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="login()[pri:0, instance:com.irctc.login.Registration@4439f31e]" name="login" duration-ms="3297" started-at="2018-07-02T18:45:02Z" finished-at="2018-07-02T18:45:05Z">
+    <test name="Gmail Login" duration-ms="16937" started-at="2018-07-04T13:56:34Z" finished-at="2018-07-04T13:56:51Z">
+      <class name="com.gmail.logout.Logout">
+        <test-method status="FAIL" signature="login()[pri:1, instance:com.gmail.logout.Logout@396a51ab]" name="login" duration-ms="1" started-at="2018-07-04T19:26:40Z" finished-at="2018-07-04T19:26:40Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at com.irctc.login.Login.login(Login.java:23)
+	at com.gmail.login.Login.login(Login.java:19)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,11 +56,217 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="register()[pri:0, instance:com.irctc.login.Registration@4439f31e]" name="register" duration-ms="0" started-at="2018-07-02T18:45:05Z" finished-at="2018-07-02T18:45:05Z">
+        <test-method status="FAIL" signature="composeMailBtnClick()[pri:2, instance:com.gmail.logout.Logout@396a51ab]" name="composeMailBtnClick" duration-ms="1" started-at="2018-07-04T19:26:44Z" finished-at="2018-07-04T19:26:44Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.gmail.mail.SendMail.composeMailBtnClick(SendMail.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- register -->
-      </class> <!-- com.irctc.login.Registration -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- composeMailBtnClick -->
+        <test-method status="FAIL" signature="composeToFrom()[pri:3, instance:com.gmail.logout.Logout@396a51ab]" name="composeToFrom" duration-ms="1" started-at="2018-07-04T19:26:50Z" finished-at="2018-07-04T19:26:50Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.gmail.mail.SendMail.composeToFrom(SendMail.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- composeToFrom -->
+        <test-method status="FAIL" signature="composeMailAttachment()[pri:4, instance:com.gmail.logout.Logout@396a51ab]" name="composeMailAttachment" duration-ms="0" started-at="2018-07-04T19:26:50Z" finished-at="2018-07-04T19:26:50Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.gmail.mail.SendMail.composeMailAttachment(SendMail.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- composeMailAttachment -->
+        <test-method status="FAIL" signature="sendMail()[pri:5, instance:com.gmail.logout.Logout@396a51ab]" name="sendMail" duration-ms="0" started-at="2018-07-04T19:26:51Z" finished-at="2018-07-04T19:26:51Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.gmail.mail.SendMail.sendMail(SendMail.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendMail -->
+        <test-method status="FAIL" signature="logout()[pri:6, instance:com.gmail.logout.Logout@396a51ab]" name="logout" duration-ms="1" started-at="2018-07-04T19:26:51Z" finished-at="2018-07-04T19:26:51Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.gmail.logout.Logout.logout(Logout.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.gmail.logout.Logout -->
+      <class name="com.gmail.mail.SendMail">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="getDriver" is-config="true" duration-ms="2665" started-at="2018-07-04T19:26:32Z" finished-at="2018-07-04T19:26:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="openBrowser" is-config="true" duration-ms="4351" started-at="2018-07-04T19:26:34Z" finished-at="2018-07-04T19:26:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="login()[pri:1, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="login" duration-ms="1399" started-at="2018-07-04T19:26:39Z" finished-at="2018-07-04T19:26:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="composeMailBtnClick()[pri:2, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="composeMailBtnClick" duration-ms="4211" started-at="2018-07-04T19:26:40Z" finished-at="2018-07-04T19:26:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- composeMailBtnClick -->
+        <test-method status="PASS" signature="composeToFrom()[pri:3, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="composeToFrom" duration-ms="5887" started-at="2018-07-04T19:26:44Z" finished-at="2018-07-04T19:26:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- composeToFrom -->
+        <test-method status="PASS" signature="composeMailAttachment()[pri:4, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="composeMailAttachment" duration-ms="123" started-at="2018-07-04T19:26:50Z" finished-at="2018-07-04T19:26:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- composeMailAttachment -->
+        <test-method status="PASS" signature="sendMail()[pri:5, instance:com.gmail.mail.SendMail@2ef5e5e3]" name="sendMail" duration-ms="935" started-at="2018-07-04T19:26:50Z" finished-at="2018-07-04T19:26:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendMail -->
+      </class> <!-- com.gmail.mail.SendMail -->
+    </test> <!-- Gmail Login -->
+  </suite> <!-- Suite -->
 </testng-results>

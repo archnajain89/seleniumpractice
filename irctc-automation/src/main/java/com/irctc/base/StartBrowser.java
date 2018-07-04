@@ -3,6 +3,7 @@ package com.irctc.base;
 import java.util.ResourceBundle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import com.irctc.constants.Standard;
@@ -11,7 +12,7 @@ public class StartBrowser {
 	public  ResourceBundle rb;
 	public  WebDriver driver;
 
-	@BeforeSuite
+	@BeforeSuite (alwaysRun=true)
 	public void getDriver()
 	{
 		rb=ResourceBundle.getBundle(Standard.CONFIG_PROPERTY_FILENAME);
@@ -24,10 +25,16 @@ public class StartBrowser {
 		//return driver;
 	}
 
-	@BeforeTest
+	@BeforeTest (alwaysRun=true)
 	public void openBrowser() {
 		driver.get(rb.getString(Standard.URL));
 		driver.manage().window().maximize();
 	}
+	
+//	@AfterSuite(alwaysRun=true)
+//	public void closeBrowser()
+//	{
+//		driver.close();
+//	}
 
 }
