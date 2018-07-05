@@ -6,7 +6,7 @@
         <!--   <define name="all"> -->
         <run>
              <include name="T1"/>    
-             <!-- <include name="T2"/>   -->       
+             <include name="T2"/>     
          <!--  </define> -->	
 <!--  <include name="all" /> -->
  </run>        

@@ -11,7 +11,6 @@ import com.gmail.login.Login;
 import com.irctc.constants.Locators;
 import com.irctc.constants.Standard;
 
-
 public class SendMail extends Login {
 
 	@Test(priority = 2, groups = { "T1" })
@@ -42,11 +41,13 @@ public class SendMail extends Login {
 		// Code of AUTOIT tool for attaching file.
 		Runtime.getRuntime()
 				.exec("D:\\T2link\\AutoItLibrary-1.1.post1\\3rdPartyTools\\AutoIt\\New folder\\uploadfile.exe");
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 	}
 
 	@Test(priority = 5, groups = { "T1" })
-	public void sendMail() {
+	public void sendMail() throws InterruptedException {
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath(Locators.SEND_BTN)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.SENT_MSG))));
 		WebElement msg=driver.findElement(By.xpath(Locators.SENT_MSG));

@@ -3,15 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.gmail.composemail.ComposeMail">
+      <class name="com.gmail.logout.Logout">
         <methods>
-          <include name="composeToFrom"/>
-          <include name="login"/>
-          <include name="getDriver"/>
-          <include name="openBrowser"/>
-          <include name="composeMailBtnClick"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- com.gmail.composemail.ComposeMail -->
+      </class> <!-- com.gmail.logout.Logout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

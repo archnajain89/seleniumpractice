@@ -5,18 +5,12 @@
     <groups>
       <run>
         <include name="T1"/>
+        <include name="T2"/>
       </run>
     </groups>
     <classes>
       <class name="com.gmail.logout.Logout">
         <methods>
-          <include name="getDriver"/>
-          <include name="openBrowser"/>
-          <include name="sendMail"/>
-          <include name="login"/>
-          <include name="composeMailBtnClick"/>
-          <include name="composeToFrom"/>
-          <include name="composeMailAttachment"/>
           <include name="logout"/>
         </methods>
       </class> <!-- com.gmail.logout.Logout -->
