@@ -1,4 +1,4 @@
-package com.irctc.constants;
+package com.gmail.constants;
 
 public class Standard {
 

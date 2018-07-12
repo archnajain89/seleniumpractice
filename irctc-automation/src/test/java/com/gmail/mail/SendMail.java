@@ -7,9 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.gmail.constants.Locators;
+import com.gmail.constants.Standard;
 import com.gmail.login.Login;
-import com.irctc.constants.Locators;
-import com.irctc.constants.Standard;
 
 public class SendMail extends Login {
 

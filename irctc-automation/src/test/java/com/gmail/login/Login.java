@@ -7,9 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import com.irctc.base.StartBrowser;
-import com.irctc.constants.Locators;
-import com.irctc.constants.Standard;
+
+import com.gmail.base.StartBrowser;
+import com.gmail.constants.Locators;
+import com.gmail.constants.Standard;
 
 public class Login extends StartBrowser {
 	public WebDriverWait wait;

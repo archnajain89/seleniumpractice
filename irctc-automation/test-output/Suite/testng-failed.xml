@@ -9,11 +9,13 @@
       </run>
     </groups>
     <classes>
-      <class name="com.gmail.logout.Logout">
+      <class name="com.gmail.mail.SendMail">
         <methods>
-          <include name="logout"/>
+          <include name="getDriver"/>
+          <include name="openBrowser"/>
+          <include name="sendMail"/>
         </methods>
-      </class> <!-- com.gmail.logout.Logout -->
+      </class> <!-- com.gmail.mail.SendMail -->
     </classes>
   </test> <!-- Gmail Login(failed) -->
 </suite> <!-- Failed suite [Suite] -->

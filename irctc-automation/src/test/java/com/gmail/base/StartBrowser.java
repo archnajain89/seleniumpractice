@@ -1,12 +1,12 @@
-package com.irctc.base;
+package com.gmail.base;
 
 import java.util.ResourceBundle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-import com.irctc.constants.Standard;
+
+import com.gmail.constants.Standard;
 
 public class StartBrowser {
 	public  ResourceBundle rb;
