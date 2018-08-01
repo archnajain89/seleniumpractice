@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]">
+  <test name="Gmail Login(failed)(failed)">
+    <groups>
+      <run>
+        <include name="T1"/>
+        <include name="T2"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.gmail.mail.SendMail">
+        <methods>
+          <include name="getDriver"/>
+          <include name="openBrowser"/>
+          <include name="sendMail"/>
+        </methods>
+      </class> <!-- com.gmail.mail.SendMail -->
+    </classes>
+  </test> <!-- Gmail Login(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->
