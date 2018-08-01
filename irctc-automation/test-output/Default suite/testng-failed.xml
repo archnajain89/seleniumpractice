@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.gmail.logout.Logout">
+      <class name="com.gmail.login.Test1">
         <methods>
-          <include name="logout"/>
+          <include name="assertTitle"/>
         </methods>
-      </class> <!-- com.gmail.logout.Logout -->
+      </class> <!-- com.gmail.login.Test1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
