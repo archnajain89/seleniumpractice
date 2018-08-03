@@ -13,11 +13,8 @@
         <methods>
           <include name="getDriver"/>
           <include name="openBrowser"/>
-          <include name="sendMail"/>
           <include name="login"/>
-          <include name="composeMailBtnClick"/>
-          <include name="composeToFrom"/>
-          <include name="composeMailAttachment"/>
+          <include name="getResult"/>
         </methods>
       </class> <!-- com.gmail.mail.SendMail -->
     </classes>

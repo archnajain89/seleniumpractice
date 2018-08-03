@@ -44,11 +44,13 @@ public class Login extends StartBrowser {
 			driver.findElement(By.xpath(Locators.PASSWORD_NEXT_BUTTON)).click();
 			// Reporting
 			logger.log(LogStatus.INFO, "Clicked on password next button");
+			String actual="hasgdhgdhas";
+			Assert.assertEquals(actual, driver.getCurrentUrl());
 			try {
 				Assert.assertTrue(false);
 			} catch (AssertionError e) {
 				System.out.println(e.getMessage());
-				logger.log(LogStatus.FAIL, "Login Test Case failed");
+				logger.log(LogStatus.FAIL, "login Test Case failed");
 				report.endTest(logger);
 				report.flush();
 			}
