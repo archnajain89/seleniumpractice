@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Gmail Login(failed)">
+    <groups>
+      <run>
+        <include name="T1"/>
+        <include name="T2"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.gmail.login.Test1">
+      <class name="com.gmail.mail.SendMail">
         <methods>
-          <include name="assertTitle"/>
+          <include name="getDriver"/>
+          <include name="openBrowser"/>
+          <include name="sendMail"/>
+          <include name="login"/>
+          <include name="composeMailBtnClick"/>
+          <include name="composeToFrom"/>
+          <include name="composeMailAttachment"/>
         </methods>
-      </class> <!-- com.gmail.login.Test1 -->
+      </class> <!-- com.gmail.mail.SendMail -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Gmail Login(failed) -->
+</suite> <!-- Failed suite [Suite] -->

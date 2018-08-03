@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.gmail.login.Test1">
+      <class name="com.gmail.login.Login">
         <methods>
-          <include name="assertTitle"/>
+          <include name="getDriver"/>
+          <include name="openBrowser"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.gmail.login.Test1 -->
+      </class> <!-- com.gmail.login.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

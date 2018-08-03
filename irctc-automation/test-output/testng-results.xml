@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22399" started-at="2018-07-24T11:22:06Z" finished-at="2018-07-24T11:22:28Z">
+  <suite name="Suite" duration-ms="29014" started-at="2018-08-03T13:46:00Z" finished-at="2018-08-03T13:46:29Z">
     <groups>
+      <group name="T1">
+        <method signature="Login.login()[pri:1, instance:com.gmail.mail.SendMail@58651fd0]" name="login" class="com.gmail.login.Login"/>
+        <method signature="SendMail.composeMailAttachment()[pri:4, instance:com.gmail.mail.SendMail@58651fd0]" name="composeMailAttachment" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.composeMailBtnClick()[pri:2, instance:com.gmail.mail.SendMail@58651fd0]" name="composeMailBtnClick" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.composeToFrom()[pri:3, instance:com.gmail.mail.SendMail@58651fd0]" name="composeToFrom" class="com.gmail.mail.SendMail"/>
+        <method signature="SendMail.sendMail()[pri:5, instance:com.gmail.mail.SendMail@58651fd0]" name="sendMail" class="com.gmail.mail.SendMail"/>
+      </group> <!-- T1 -->
     </groups>
-    <test name="Default test" duration-ms="22399" started-at="2018-07-24T11:22:06Z" finished-at="2018-07-24T11:22:28Z">
-      <class name="com.gmail.login.Test1">
-        <test-method status="PASS" signature="assertTitle()[pri:5, instance:com.gmail.login.Test1@7c0e2abd]" name="assertTitle" duration-ms="22384" started-at="2018-07-24T16:52:06Z" finished-at="2018-07-24T16:52:28Z">
+    <test name="Gmail Login" duration-ms="29014" started-at="2018-08-03T13:46:00Z" finished-at="2018-08-03T13:46:29Z">
+      <class name="com.gmail.mail.SendMail">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.gmail.mail.SendMail@58651fd0]" name="getDriver" is-config="true" duration-ms="2829" started-at="2018-08-03T19:15:57Z" finished-at="2018-08-03T19:16:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assertTitle -->
-      </class> <!-- com.gmail.login.Test1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- getDriver -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.gmail.mail.SendMail@58651fd0]" name="openBrowser" is-config="true" duration-ms="5001" started-at="2018-08-03T19:16:00Z" finished-at="2018-08-03T19:16:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="login()[pri:1, instance:com.gmail.mail.SendMail@58651fd0]" name="login" duration-ms="1435" started-at="2018-08-03T19:16:05Z" finished-at="2018-08-03T19:16:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="composeMailBtnClick()[pri:2, instance:com.gmail.mail.SendMail@58651fd0]" name="composeMailBtnClick" duration-ms="5153" started-at="2018-08-03T19:16:07Z" finished-at="2018-08-03T19:16:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- composeMailBtnClick -->
+        <test-method status="PASS" signature="composeToFrom()[pri:3, instance:com.gmail.mail.SendMail@58651fd0]" name="composeToFrom" duration-ms="6348" started-at="2018-08-03T19:16:12Z" finished-at="2018-08-03T19:16:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- composeToFrom -->
+        <test-method status="PASS" signature="composeMailAttachment()[pri:4, instance:com.gmail.mail.SendMail@58651fd0]" name="composeMailAttachment" duration-ms="5125" started-at="2018-08-03T19:16:18Z" finished-at="2018-08-03T19:16:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- composeMailAttachment -->
+        <test-method status="PASS" signature="sendMail()[pri:5, instance:com.gmail.mail.SendMail@58651fd0]" name="sendMail" duration-ms="5936" started-at="2018-08-03T19:16:23Z" finished-at="2018-08-03T19:16:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendMail -->
+      </class> <!-- com.gmail.mail.SendMail -->
+    </test> <!-- Gmail Login -->
+  </suite> <!-- Suite -->
 </testng-results>

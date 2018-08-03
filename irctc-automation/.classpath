@@ -34,5 +34,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/arrchnnajaiin/Downloads/selenium-server-standalone-3.12.0.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/extentreports-2.41.2.jar" sourcepath="C:/Users/ARRCHN~1/AppData/Local/Temp/.org.sf.feeling.decompiler1532328564615/source/extentreports-2.41.2-sources.jar"/>
+	<classpathentry kind="lib" path="D:/freemarker-2.3.23 (2).jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
