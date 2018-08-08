@@ -25,9 +25,18 @@ public class SendMail extends Login {
 	public void composeMailBtnClick() {
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		// wait = new WebDriverWait(driver, 20);
+		System.out.println("Issue in line 28");
+		try
+		{
 		wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.COMPOSE_BTN))));
+		System.out.println("Issue in line 30");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locators.COMPOSE_BTN)));
 		driver.findElement(By.xpath(Locators.COMPOSE_BTN)).click();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
 	}
 
 	@Test(priority = 3, groups = { "T1" })

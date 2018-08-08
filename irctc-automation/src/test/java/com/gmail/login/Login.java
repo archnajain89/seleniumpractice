@@ -7,13 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import com.gmail.base.StartBrowser;
 import com.gmail.constants.Locators;
 import com.gmail.constants.Standard;
-import com.gmail.utility.Utility;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class Login extends StartBrowser {
@@ -44,40 +41,32 @@ public class Login extends StartBrowser {
 			driver.findElement(By.xpath(Locators.PASSWORD_NEXT_BUTTON)).click();
 			// Reporting
 			logger.log(LogStatus.INFO, "Clicked on password next button");
-			String actual="hasgdhgdhas";
+			String actual = "hasgdhgdhas";
 			Assert.assertEquals(actual, driver.getCurrentUrl());
-			try {
-				Assert.assertTrue(false);
-			} catch (AssertionError e) {
-				System.out.println(e.getMessage());
-				logger.log(LogStatus.FAIL, "login Test Case failed");
-				report.endTest(logger);
-				report.flush();
-			}
+			// Assert.assertTrue(false);
 
-		} catch (StaleElementReferenceException e) {
+		} catch (AssertionError e) {
 			System.out.println(e.getMessage());
+			logger.log(LogStatus.FAIL, "login Test Case failed");
+			report.endTest(logger);
+			report.flush();
 		}
 	}
 
-	@AfterMethod(groups={"T1"})
-	public void getResult(ITestResult result) throws Exception {
-		// using ITestResult.FAILURE is equals to result.getStatus then it enter
-		// into if condition
-		if (ITestResult.FAILURE == result.getStatus()) {
-			logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
-			logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
-			// To capture screenshot path and store the path of the screenshot
-			// in the string "screenshotPath"
-			// We do pass the path captured by this method in to the extent
-			// reports using "logger.addScreenCapture" method.
-			String screenshotPath = Utility.getScreenshot(driver, result.getName());
-			// To add it in the extent report
-			logger.log(LogStatus.FAIL, logger.addScreenCapture(screenshotPath));
-		} else if (result.getStatus() == ITestResult.SKIP) {
-			logger.log(LogStatus.SKIP, "Test Case Skipped is " + result.getName());
-		}
-		report.endTest(logger);
-		report.flush();
-	}
+	/*
+	 * @AfterMethod(groups={"T1"}) public void getResult(ITestResult result)
+	 * throws Exception { // using ITestResult.FAILURE is equals to
+	 * result.getStatus then it enter // into if condition if
+	 * (ITestResult.FAILURE == result.getStatus()) { logger.log(LogStatus.FAIL,
+	 * "Test Case Failed is " + result.getName()); logger.log(LogStatus.FAIL,
+	 * "Test Case Failed is " + result.getThrowable()); // To capture screenshot
+	 * path and store the path of the screenshot // in the string
+	 * "screenshotPath" // We do pass the path captured by this method in to the
+	 * extent // reports using "logger.addScreenCapture" method. String
+	 * screenshotPath = Utility.getScreenshot(driver, result.getName()); // To
+	 * add it in the extent report logger.log(LogStatus.FAIL,
+	 * logger.addScreenCapture(screenshotPath)); } else if (result.getStatus()
+	 * == ITestResult.SKIP) { logger.log(LogStatus.SKIP, "Test Case Skipped is "
+	 * + result.getName()); } report.endTest(logger); report.flush(); }
+	 */
 }

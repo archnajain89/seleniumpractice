@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+<listeners>
+ <listener class-name="com.gmail.login.ListenerTest"/>
+ </listeners>
 	<test name="Gmail Login">
 <groups>
         <!--   <define name="all"> -->
         <run>
              <include name="T1"/>    
-             <include name="T2"/>     
+       		<!--  <include name="T2"/>  --> 
          <!--  </define> -->	
 <!--  <include name="all" /> -->
  </run>        
  </groups>
-		<classes>			
+ 		<classes>		
+ 			<class name="com.gmail.login.Login"/>	
 			<class name="com.gmail.mail.SendMail" />
-			<class name="com.gmail.logout.Logout" />
+			<!-- <class name="com.gmail.logout.Logout" /> -->
 		</classes>			
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
