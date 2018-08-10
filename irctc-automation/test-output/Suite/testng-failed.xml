@@ -8,6 +8,7 @@
     <groups>
       <run>
         <include name="T1"/>
+        <include name="T2"/>
       </run>
     </groups>
     <classes>
@@ -16,7 +17,6 @@
           <include name="getDriver"/>
           <include name="openBrowser"/>
           <include name="sendMail"/>
-          <include name="login"/>
           <include name="composeToFrom"/>
           <include name="composeMailAttachment"/>
         </methods>

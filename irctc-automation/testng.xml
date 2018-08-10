@@ -8,15 +8,15 @@
 <groups>
         <!--   <define name="all"> -->
         <run>
-             <include name="T1"/>    
-       		<!--  <include name="T2"/>  --> 
+             	<include name="T1"/>    
+       			<include name="T2"/> 
          <!--  </define> -->	
 <!--  <include name="all" /> -->
  </run>        
  </groups>
  		<classes>		
- 			<class name="com.gmail.login.Login"/>	
-			<class name="com.gmail.mail.SendMail" />
+			 <class name="com.gmail.login.Login"/>
+ 			 <class name="com.gmail.mail.SendMail" />
 			<!-- <class name="com.gmail.logout.Logout" /> -->
 		</classes>			
 	</test> <!-- Test -->

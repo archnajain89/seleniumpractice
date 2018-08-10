@@ -13,21 +13,23 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import com.gmail.base.StartBrowser;
 import com.gmail.constants.Locators;
 import com.gmail.constants.Standard;
-import com.gmail.login.Login;
 
-public class SendMail extends Login {
-
-	@Test(priority = 2, groups = { "T1" })
+public class SendMail extends StartBrowser {
+	
+	@Test(priority = 1, groups = { "T2" })
 	public void composeMailBtnClick() {
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		// wait = new WebDriverWait(driver, 20);
 		System.out.println("Issue in line 28");
 		try
 		{
+		wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.COMPOSE_BTN))));
 		System.out.println("Issue in line 30");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locators.COMPOSE_BTN)));
@@ -39,7 +41,7 @@ public class SendMail extends Login {
 		}
 	}
 
-	@Test(priority = 3, groups = { "T1" })
+	@Test(priority = 2, groups = { "T2" })
 	public void composeToFrom() {
 		try {
 
@@ -56,7 +58,7 @@ public class SendMail extends Login {
 		}
 	}
 
-	@Test(priority = 4, groups = { "T1" })
+	@Test(priority = 3, groups = { "T2" })
 	public void composeMailAttachment() throws IOException, InterruptedException {
 		wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.ATTACHMENT_LINK))));
 		driver.findElement(By.xpath(Locators.ATTACHMENT_LINK)).click();
@@ -66,7 +68,7 @@ public class SendMail extends Login {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 5, groups = { "T1" })
+	@Test(priority = 4, groups = { "T2" })
 	public void sendMail() throws InterruptedException, IOException {
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Thread.sleep(5000);

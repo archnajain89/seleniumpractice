@@ -2,7 +2,6 @@ package com.gmail.login;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,7 +13,7 @@ import com.gmail.constants.Standard;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class Login extends StartBrowser {
-	public WebDriverWait wait;
+	
 
 	@Test(priority = 1, groups = { "T1" })
 	public void login() {
