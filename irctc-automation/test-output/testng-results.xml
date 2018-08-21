@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" ignored="2" total="7" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="33241" started-at="2018-08-10T11:32:01Z" finished-at="2018-08-10T11:32:34Z">
+  <suite name="Suite" duration-ms="40202" started-at="2018-08-21T09:55:11Z" finished-at="2018-08-21T09:55:52Z">
     <groups>
       <group name="T1">
         <method signature="Login.login()[pri:1, instance:com.gmail.login.Login@9629756]" name="login" class="com.gmail.login.Login"/>
@@ -14,35 +14,35 @@
         <method signature="SendMail.sendMail()[pri:4, instance:com.gmail.mail.SendMail@5419f379]" name="sendMail" class="com.gmail.mail.SendMail"/>
       </group> <!-- T2 -->
     </groups>
-    <test name="Gmail Login" duration-ms="33241" started-at="2018-08-10T11:32:01Z" finished-at="2018-08-10T11:32:34Z">
+    <test name="Gmail Login" duration-ms="40202" started-at="2018-08-21T09:55:11Z" finished-at="2018-08-21T09:55:52Z">
       <class name="com.gmail.login.Login">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.gmail.login.Login@9629756]" name="getDriver" is-config="true" duration-ms="3535" started-at="2018-08-10T17:01:57Z" finished-at="2018-08-10T17:02:01Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.gmail.login.Login@9629756]" name="getDriver" is-config="true" duration-ms="3080" started-at="2018-08-21T15:25:08Z" finished-at="2018-08-21T15:25:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.gmail.login.Login@9629756]" name="openBrowser" is-config="true" duration-ms="5904" started-at="2018-08-10T17:02:01Z" finished-at="2018-08-10T17:02:07Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.gmail.login.Login@9629756]" name="openBrowser" is-config="true" duration-ms="9378" started-at="2018-08-21T15:25:11Z" finished-at="2018-08-21T15:25:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="login()[pri:1, instance:com.gmail.login.Login@9629756]" name="login" duration-ms="1562" started-at="2018-08-10T17:02:07Z" finished-at="2018-08-10T17:02:08Z">
+        <test-method status="PASS" signature="login()[pri:1, instance:com.gmail.login.Login@9629756]" name="login" duration-ms="1430" started-at="2018-08-21T15:25:21Z" finished-at="2018-08-21T15:25:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
       </class> <!-- com.gmail.login.Login -->
       <class name="com.gmail.mail.SendMail">
-        <test-method status="PASS" signature="composeMailBtnClick()[pri:1, instance:com.gmail.mail.SendMail@5419f379]" name="composeMailBtnClick" duration-ms="5127" started-at="2018-08-10T17:02:08Z" finished-at="2018-08-10T17:02:13Z">
+        <test-method status="PASS" signature="composeMailBtnClick()[pri:1, instance:com.gmail.mail.SendMail@5419f379]" name="composeMailBtnClick" duration-ms="11929" started-at="2018-08-21T15:25:22Z" finished-at="2018-08-21T15:25:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- composeMailBtnClick -->
-        <test-method status="PASS" signature="composeToFrom()[pri:2, instance:com.gmail.mail.SendMail@5419f379]" name="composeToFrom" duration-ms="9484" started-at="2018-08-10T17:02:13Z" finished-at="2018-08-10T17:02:23Z">
+        <test-method status="PASS" signature="composeToFrom()[pri:2, instance:com.gmail.mail.SendMail@5419f379]" name="composeToFrom" duration-ms="3225" started-at="2018-08-21T15:25:34Z" finished-at="2018-08-21T15:25:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- composeToFrom -->
-        <test-method status="PASS" signature="composeMailAttachment()[pri:3, instance:com.gmail.mail.SendMail@5419f379]" name="composeMailAttachment" duration-ms="5111" started-at="2018-08-10T17:02:23Z" finished-at="2018-08-10T17:02:28Z">
+        <test-method status="PASS" signature="composeMailAttachment()[pri:3, instance:com.gmail.mail.SendMail@5419f379]" name="composeMailAttachment" duration-ms="5124" started-at="2018-08-21T15:25:37Z" finished-at="2018-08-21T15:25:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- composeMailAttachment -->
-        <test-method status="PASS" signature="sendMail()[pri:4, instance:com.gmail.mail.SendMail@5419f379]" name="sendMail" duration-ms="6035" started-at="2018-08-10T17:02:28Z" finished-at="2018-08-10T17:02:34Z">
+        <test-method status="PASS" signature="sendMail()[pri:4, instance:com.gmail.mail.SendMail@5419f379]" name="sendMail" duration-ms="8957" started-at="2018-08-21T15:25:43Z" finished-at="2018-08-21T15:25:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendMail -->

@@ -17,8 +17,6 @@
           <include name="getDriver"/>
           <include name="openBrowser"/>
           <include name="sendMail"/>
-          <include name="composeToFrom"/>
-          <include name="composeMailAttachment"/>
         </methods>
       </class> <!-- com.gmail.mail.SendMail -->
     </classes>

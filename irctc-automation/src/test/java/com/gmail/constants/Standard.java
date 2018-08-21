@@ -13,7 +13,7 @@ public class Standard {
 	public static final String RECIPIENTS_EMAIL_ID = "archnajain89@gmail.com";
 	public static final String SUBJECTS_NAME = "Test Mail";
 	public static final String BODY_TEXT = "Hi, This is the mail send via automation scripts.";
-	public static final String EXPECTED_MSG = "Your message has been sent. View message";
+	public static final String EXPECTED_MSG = "Message sent.";
 	
 	
 }

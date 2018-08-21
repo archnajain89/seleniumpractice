@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 public class Utility  {
 	
 	public static String getScreenshot(WebDriver driver, String screenshotName) throws Exception {
-		 String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		 String dateName = new SimpleDateFormat("yyyy-MM-dd hhmmss").format(new Date());
 		 TakesScreenshot ts = (TakesScreenshot) driver;
 		 File source = ts.getScreenshotAs(OutputType.FILE);
 		                //after execution, you could see a folder "FailedTestsScreenshots" under src folder

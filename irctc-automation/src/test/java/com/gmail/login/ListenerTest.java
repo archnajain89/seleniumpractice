@@ -11,11 +11,16 @@ public class ListenerTest extends StartBrowser implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
+		logger = report.startTest(result.getName());
+		logger.log(LogStatus.INFO, result.getName()+ " test case started.");
 	    System.out.println(result.getName()+": test case started");	
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
+		logger.log(LogStatus.INFO, result.getName()+ " test case passed.");
+		report.endTest(logger);
+		report.flush();
 		System.out.println("The name of the testcase passed is :"+result.getName());
 	}
 
@@ -23,7 +28,7 @@ public class ListenerTest extends StartBrowser implements ITestListener {
 		// TODO Auto-generated method stub
 		//System.out.println("The name of the testcase failed is :"+result.getName());
 		if (ITestResult.FAILURE == result.getStatus()) {
-			logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
+			logger.log(LogStatus.FAIL, "Failed test case is " + result.getName());
 			//logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
 			// To capture screenshot path and store the path of the screenshot
 			// in the string "screenshotPath"

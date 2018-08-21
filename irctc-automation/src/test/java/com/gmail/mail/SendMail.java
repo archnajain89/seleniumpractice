@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,25 +20,26 @@ import org.testng.annotations.Test;
 import com.gmail.base.StartBrowser;
 import com.gmail.constants.Locators;
 import com.gmail.constants.Standard;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class SendMail extends StartBrowser {
 	
 	@Test(priority = 1, groups = { "T2" })
 	public void composeMailBtnClick() {
-		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		// wait = new WebDriverWait(driver, 20);
-		System.out.println("Issue in line 28");
+		
 		try
 		{
+		//logger = report.startTest("send Mail");
 		wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.COMPOSE_BTN))));
-		System.out.println("Issue in line 30");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locators.COMPOSE_BTN)));
 		driver.findElement(By.xpath(Locators.COMPOSE_BTN)).click();
+		logger.log(LogStatus.PASS, "Compose Button clicked");
 		}
 		catch(Exception e)
 		{
 			System.out.println(e);
+			logger.log(LogStatus.FAIL, "Compose button not clicked");
 		}
 	}
 
@@ -53,8 +55,10 @@ public class SendMail extends StartBrowser {
 			driver.findElement(By.xpath(Locators.SUBJECTS)).sendKeys(Standard.SUBJECTS_NAME);
 			wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.BODY))));
 			driver.findElement(By.xpath(Locators.BODY)).sendKeys(Standard.BODY_TEXT);
+			logger.log(LogStatus.PASS, "Mail data entered in ComposeToFrom");
 		} catch (StaleElementReferenceException e) {
 			System.out.println(e.getMessage());
+			logger.log(LogStatus.FAIL, "Mail data not entered successfully.");
 		}
 	}
 
@@ -64,8 +68,9 @@ public class SendMail extends StartBrowser {
 		driver.findElement(By.xpath(Locators.ATTACHMENT_LINK)).click();
 		// Code of AUTOIT tool for attaching file.
 		Runtime.getRuntime()
-				.exec("D:\\T2link\\AutoItLibrary-1.1.post1\\3rdPartyTools\\AutoIt\\New folder\\uploadfile.exe");
+				.exec("D:\\my_data\\data\\uploadfile.exe");
 		Thread.sleep(5000);
+		logger.log(LogStatus.PASS, "Attachment completed");
 	}
 
 	@Test(priority = 4, groups = { "T2" })
@@ -73,21 +78,33 @@ public class SendMail extends StartBrowser {
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		driver.findElement(By.xpath(Locators.SEND_BTN)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.SENT_MSG))));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.SENT_MSG))));
+		Thread.sleep(3000);
 		WebElement msg = driver.findElement(By.xpath(Locators.SENT_MSG));
-		String actualMessage = msg.getText();
-		// Assert.assertEquals("Your message has been sent. View message",
-		// Standard.EXPECTED_MSG);
+		String actualMessage = "Sending..";
+		//String actualMessage = msg.getText();
+		//System.out.println(actualMessage);
 		try {
+			/*JavascriptExecutor jse = (JavascriptExecutor)driver;
+			WebElement element = driver.findElement(By.xpath(Locators.SENT_MSG));
+			jse.executeScript("return arguments[0].text", element);*/
 			Assert.assertEquals(actualMessage, Standard.EXPECTED_MSG);
+			//System.out.println("Actual message and expected message is equal");
+			logger.log(LogStatus.PASS, "Mail Sent.");
+			//report.endTest(logger);
+			//report.flush();
 		} catch (AssertionError e) {
 			// Take screenshot if Assertion fails.
 			String filename = "failed";
-			DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy h-m-s");
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hhmmss");
 			Date date = new Date();
+			System.out.println(dateFormat.format(date));
 			File f1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			File f2 = new File(".\\Screenshot\\" + filename + "-" + dateFormat.format(date) + ".png");
+			String destfilename=System.getProperty("user.dir")+"\\Screenshot\\"+filename+"_"+ dateFormat.format(date)+".png";
+			File f2 = new File(destfilename);
+			System.out.println(f2);
 			FileUtils.copyFile(f1, f2);
+			logger.log(LogStatus.FAIL, "Mail not sent. Screenshot attached.");
 
 		}
 

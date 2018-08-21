@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]">
+  <listeners>
+    <listener class-name="com.gmail.login.ListenerTest"/>
+  </listeners>
   <test name="Gmail Login(failed)(failed)">
     <groups>
       <run>
@@ -14,6 +17,8 @@
           <include name="getDriver"/>
           <include name="openBrowser"/>
           <include name="sendMail"/>
+          <include name="composeToFrom"/>
+          <include name="composeMailAttachment"/>
         </methods>
       </class> <!-- com.gmail.mail.SendMail -->
     </classes>
