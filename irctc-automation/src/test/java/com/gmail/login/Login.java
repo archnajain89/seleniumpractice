@@ -16,7 +16,7 @@ public class Login extends StartBrowser {
 
 	@Test(priority = 1, groups = { "T1" })
 	public void login() {
-		//logger = report.startTest("login");
+		// logger = report.startTest("login");
 		// Enter userid in textbox
 		WebElement ele = driver.findElement(By.xpath(Locators.USER_ID));
 		ele.sendKeys(Standard.EMAIL_ID_VALUE);
@@ -42,28 +42,12 @@ public class Login extends StartBrowser {
 			logger.log(LogStatus.PASS, "Login successful");
 			report.endTest(logger);
 			report.flush();
-			} catch (AssertionError e) {
+		} catch (AssertionError e) {
 			System.out.println(e.getMessage());
 			logger.log(LogStatus.FAIL, "Login Test Case Failed");
-			//report.endTest(logger);
-			//report.flush();
+			// report.endTest(logger);
+			// report.flush();
 		}
 	}
 
-	/*
-	 * @AfterMethod(groups={"T1"}) public void getResult(ITestResult result)
-	 * throws Exception { // using ITestResult.FAILURE is equals to
-	 * result.getStatus then it enter // into if condition if
-	 * (ITestResult.FAILURE == result.getStatus()) { logger.log(LogStatus.FAIL,
-	 * "Test Case Failed is " + result.getName()); logger.log(LogStatus.FAIL,
-	 * "Test Case Failed is " + result.getThrowable()); // To capture screenshot
-	 * path and store the path of the screenshot // in the string
-	 * "screenshotPath" // We do pass the path captured by this method in to the
-	 * extent // reports using "logger.addScreenCapture" method. String
-	 * screenshotPath = Utility.getScreenshot(driver, result.getName()); // To
-	 * add it in the extent report logger.log(LogStatus.FAIL,
-	 * logger.addScreenCapture(screenshotPath)); } else if (result.getStatus()
-	 * == ITestResult.SKIP) { logger.log(LogStatus.SKIP, "Test Case Skipped is "
-	 * + result.getName()); } report.endTest(logger); report.flush(); }
-	 */
 }
