@@ -1,52 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="7" passed="5">
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="40202" started-at="2018-08-21T09:55:11Z" finished-at="2018-08-21T09:55:52Z">
+  <suite name="Suite" duration-ms="25978" started-at="2018-08-21T14:20:31Z" finished-at="2018-08-21T14:20:57Z">
     <groups>
       <group name="T1">
-        <method signature="Login.login()[pri:1, instance:com.gmail.login.Login@9629756]" name="login" class="com.gmail.login.Login"/>
+        <method signature="Login.login()[pri:1, instance:com.gmail.login.Login@5034c75a]" name="login" class="com.gmail.login.Login"/>
       </group> <!-- T1 -->
       <group name="T2">
-        <method signature="SendMail.composeMailAttachment()[pri:3, instance:com.gmail.mail.SendMail@5419f379]" name="composeMailAttachment" class="com.gmail.mail.SendMail"/>
-        <method signature="SendMail.composeMailBtnClick()[pri:1, instance:com.gmail.mail.SendMail@5419f379]" name="composeMailBtnClick" class="com.gmail.mail.SendMail"/>
-        <method signature="SendMail.composeToFrom()[pri:2, instance:com.gmail.mail.SendMail@5419f379]" name="composeToFrom" class="com.gmail.mail.SendMail"/>
-        <method signature="SendMail.sendMail()[pri:4, instance:com.gmail.mail.SendMail@5419f379]" name="sendMail" class="com.gmail.mail.SendMail"/>
+        <method signature="DeleteSentMail.deleteSentMail()[pri:5, instance:com.gmail.mail.DeleteSentMail@62ee68d8]" name="deleteSentMail" class="com.gmail.mail.DeleteSentMail"/>
       </group> <!-- T2 -->
     </groups>
-    <test name="Gmail Login" duration-ms="40202" started-at="2018-08-21T09:55:11Z" finished-at="2018-08-21T09:55:52Z">
+    <test name="Gmail Login" duration-ms="25978" started-at="2018-08-21T14:20:31Z" finished-at="2018-08-21T14:20:57Z">
       <class name="com.gmail.login.Login">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.gmail.login.Login@9629756]" name="getDriver" is-config="true" duration-ms="3080" started-at="2018-08-21T15:25:08Z" finished-at="2018-08-21T15:25:11Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.gmail.login.Login@5034c75a]" name="getDriver" is-config="true" duration-ms="3046" started-at="2018-08-21T19:50:28Z" finished-at="2018-08-21T19:50:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.gmail.login.Login@9629756]" name="openBrowser" is-config="true" duration-ms="9378" started-at="2018-08-21T15:25:11Z" finished-at="2018-08-21T15:25:21Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.gmail.login.Login@5034c75a]" name="openBrowser" is-config="true" duration-ms="5792" started-at="2018-08-21T19:50:31Z" finished-at="2018-08-21T19:50:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="login()[pri:1, instance:com.gmail.login.Login@9629756]" name="login" duration-ms="1430" started-at="2018-08-21T15:25:21Z" finished-at="2018-08-21T15:25:22Z">
+        <test-method status="PASS" signature="login()[pri:1, instance:com.gmail.login.Login@5034c75a]" name="login" duration-ms="1775" started-at="2018-08-21T19:50:36Z" finished-at="2018-08-21T19:50:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
       </class> <!-- com.gmail.login.Login -->
-      <class name="com.gmail.mail.SendMail">
-        <test-method status="PASS" signature="composeMailBtnClick()[pri:1, instance:com.gmail.mail.SendMail@5419f379]" name="composeMailBtnClick" duration-ms="11929" started-at="2018-08-21T15:25:22Z" finished-at="2018-08-21T15:25:34Z">
+      <class name="com.gmail.mail.DeleteSentMail">
+        <test-method status="PASS" signature="deleteSentMail()[pri:5, instance:com.gmail.mail.DeleteSentMail@62ee68d8]" name="deleteSentMail" duration-ms="18346" started-at="2018-08-21T19:50:38Z" finished-at="2018-08-21T19:50:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- composeMailBtnClick -->
-        <test-method status="PASS" signature="composeToFrom()[pri:2, instance:com.gmail.mail.SendMail@5419f379]" name="composeToFrom" duration-ms="3225" started-at="2018-08-21T15:25:34Z" finished-at="2018-08-21T15:25:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- composeToFrom -->
-        <test-method status="PASS" signature="composeMailAttachment()[pri:3, instance:com.gmail.mail.SendMail@5419f379]" name="composeMailAttachment" duration-ms="5124" started-at="2018-08-21T15:25:37Z" finished-at="2018-08-21T15:25:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- composeMailAttachment -->
-        <test-method status="PASS" signature="sendMail()[pri:4, instance:com.gmail.mail.SendMail@5419f379]" name="sendMail" duration-ms="8957" started-at="2018-08-21T15:25:43Z" finished-at="2018-08-21T15:25:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sendMail -->
-      </class> <!-- com.gmail.mail.SendMail -->
+        </test-method> <!-- deleteSentMail -->
+      </class> <!-- com.gmail.mail.DeleteSentMail -->
     </test> <!-- Gmail Login -->
   </suite> <!-- Suite -->
 </testng-results>

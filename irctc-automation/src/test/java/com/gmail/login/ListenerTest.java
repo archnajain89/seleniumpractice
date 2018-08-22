@@ -54,6 +54,7 @@ public class ListenerTest extends StartBrowser implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
+		logger.log(LogStatus.SKIP, result.getName() + " test case skipped.");
 		System.out.println("The name of the testcase skipped is :" + result.getName());
 	}
 

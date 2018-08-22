@@ -17,7 +17,7 @@ public class StartBrowser {
 	public static WebDriver driver;
 	public static ExtentReports report;
 	public static ExtentTest logger;
-	public WebDriverWait wait;
+	public static WebDriverWait wait;
 
 	@BeforeSuite(alwaysRun = true)
 	public void getDriver() {
