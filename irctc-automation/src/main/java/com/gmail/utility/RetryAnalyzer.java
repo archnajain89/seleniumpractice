@@ -21,7 +21,9 @@ public class RetryAnalyzer implements IRetryAnalyzer {
 	        } else {
 	        	result.setStatus(ITestResult.SUCCESS);      //If test passes, TestNG marks it as passed
 	        }
+		 System.out.println("Test");
 	        return false;
+	        
 
 	}
 
