@@ -7,18 +7,17 @@
   <test name="Gmail Login(failed)">
     <groups>
       <run>
-        <include name="T1"/>
         <include name="T2"/>
       </run>
     </groups>
     <classes>
-      <class name="com.gmail.mail.SendMail">
+      <class name="com.gmail.login.LoginExcel">
         <methods>
           <include name="getDriver"/>
           <include name="openBrowser"/>
-          <include name="composeMailAttachment"/>
+          <include name="login1"/>
         </methods>
-      </class> <!-- com.gmail.mail.SendMail -->
+      </class> <!-- com.gmail.login.LoginExcel -->
     </classes>
   </test> <!-- Gmail Login(failed) -->
 </suite> <!-- Failed suite [Suite] -->

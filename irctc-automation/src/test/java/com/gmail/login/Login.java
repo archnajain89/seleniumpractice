@@ -21,13 +21,13 @@ public class Login extends StartBrowser {
 		// Enter userid in textbox
 		WebElement ele = driver.findElement(By.xpath(Locators.USER_ID));
 		ele.sendKeys(Standard.EMAIL_ID_VALUE);
-		logger.log(LogStatus.INFO, "Email id entered.");
+		logger1.log(LogStatus.INFO, "Email id entered.");
 		// Click on next button
 		driver.findElement(By.xpath(Locators.NEXT_BUTTON)).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// Enter password in text box
 		driver.findElement(By.xpath(Locators.PASS)).sendKeys(Standard.PASS_VALUE);
-		logger.log(LogStatus.INFO, "Password entered.");
+		logger1.log(LogStatus.INFO, "Password entered.");
 		// Add try catch block to handle stale element exception
 		wait = new WebDriverWait(driver, 20);
 		// Apply explicit wait so that element can be visible and clickable
@@ -36,11 +36,11 @@ public class Login extends StartBrowser {
 		// Click on Login button
 		driver.findElement(By.xpath(Locators.PASSWORD_NEXT_BUTTON)).click();
 		// Reporting
-		logger.log(LogStatus.INFO, "Clicked on password next button");
+		logger1.log(LogStatus.INFO, "Clicked on password next button");
 		String actual = "https://accounts.google.com/signin/v2/sl/pwd?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&cid=1&navigationDirection=forward";
 		//String actual="sdfjhffsf";
 		Assert.assertEquals(actual, driver.getCurrentUrl());
-		logger.log(LogStatus.PASS, "Login successful");
+		logger1.log(LogStatus.PASS, "Login successful");
 		//} 
 		/*catch (AssertionError e) {
 		System.out.println(e.getMessage());

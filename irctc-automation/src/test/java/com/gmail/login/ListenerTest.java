@@ -11,15 +11,15 @@ public class ListenerTest extends StartBrowser implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
-		logger = report.startTest(result.getName());
-		logger.log(LogStatus.INFO, result.getName() + " test case started.");
+		logger1 = report.startTest(result.getName());
+		logger1.log(LogStatus.INFO, result.getName() + " test case started.");
 		System.out.println(result.getName() + ": test case started");
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		logger.log(LogStatus.INFO, result.getName() + " test case passed.");
-		report.endTest(logger);
+		logger1.log(LogStatus.INFO, result.getName() + " test case passed.");
+		report.endTest(logger1);
 		report.flush();
 		System.out.println("The name of the testcase passed is :" + result.getName());
 	}
@@ -28,7 +28,7 @@ public class ListenerTest extends StartBrowser implements ITestListener {
 		// TODO Auto-generated method stub
 		System.out.println("The name of the testcase failed is: "+result.getName());
 		if (ITestResult.FAILURE == result.getStatus()) {
-			logger.log(LogStatus.FAIL, "Failed test case is " + result.getName());
+			logger1.log(LogStatus.FAIL, "Failed test case is " + result.getName());
 			// logger.log(LogStatus.FAIL, "Test Case Failed is " +
 			// result.getThrowable());
 			// To capture screenshot path and store the path of the screenshot
@@ -43,17 +43,17 @@ public class ListenerTest extends StartBrowser implements ITestListener {
 				e.printStackTrace();
 			}
 			// To add it in the extent report
-			logger.log(LogStatus.FAIL, logger.addScreenCapture(screenshotPath));
+			logger1.log(LogStatus.FAIL, logger1.addScreenCapture(screenshotPath));
 		} else if (result.getStatus() == ITestResult.SKIP) {
-			logger.log(LogStatus.SKIP, "Test Case Skipped is " + result.getName());
+			logger1.log(LogStatus.SKIP, "Test Case Skipped is " + result.getName());
 		}
-		report.endTest(logger);
+		report.endTest(logger1);
 		report.flush();
 	}
 
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
-		logger.log(LogStatus.SKIP, result.getName() + " test case skipped.");
+		logger1.log(LogStatus.SKIP, result.getName() + " test case skipped.");
 		System.out.println("The name of the testcase skipped is :" + result.getName());
 	}
 

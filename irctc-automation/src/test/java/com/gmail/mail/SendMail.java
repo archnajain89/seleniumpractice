@@ -8,7 +8,6 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
@@ -33,10 +32,10 @@ public class SendMail extends StartBrowser {
 			wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.COMPOSE_BTN))));
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locators.COMPOSE_BTN)));
 			driver.findElement(By.xpath(Locators.COMPOSE_BTN)).click();
-			logger.log(LogStatus.PASS, "Compose Button clicked");
+			logger1.log(LogStatus.PASS, "Compose Button clicked");
 		} catch (Exception e) {
 			System.out.println(e);
-			logger.log(LogStatus.FAIL, "Compose button not clicked");
+			logger1.log(LogStatus.FAIL, "Compose button not clicked");
 		}
 	}
 
@@ -52,10 +51,10 @@ public class SendMail extends StartBrowser {
 			driver.findElement(By.xpath(Locators.SUBJECTS)).sendKeys(Standard.SUBJECTS_NAME);
 			wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.BODY))));
 			driver.findElement(By.xpath(Locators.BODY)).sendKeys(Standard.BODY_TEXT);
-			logger.log(LogStatus.PASS, "Mail data entered in ComposeToFrom");
+			logger1.log(LogStatus.PASS, "Mail data entered in ComposeToFrom");
 		} catch (StaleElementReferenceException e) {
 			System.out.println(e.getMessage());
-			logger.log(LogStatus.FAIL, "Mail data not entered successfully.");
+			logger1.log(LogStatus.FAIL, "Mail data not entered successfully.");
 		}
 	}
 
@@ -66,7 +65,7 @@ public class SendMail extends StartBrowser {
 		// Code of AUTOIT tool for attaching file.
 		Runtime.getRuntime().exec("C:\\Users\\arrchnnajaiin\\Downloads\\uploadfile.exe");
 		Thread.sleep(5000);
-		logger.log(LogStatus.PASS, "Attachment completed");
+		logger1.log(LogStatus.PASS, "Attachment completed");
 	}
 
 	@Test(priority = 4, groups = { "T2" })
@@ -89,7 +88,7 @@ public class SendMail extends StartBrowser {
 			Assert.assertEquals(actualMessage, Standard.EXPECTED_MSG);
 			// System.out.println("Actual message and expected message is
 			// equal");
-			logger.log(LogStatus.PASS, "Mail Sent.");
+			logger1.log(LogStatus.PASS, "Mail Sent.");
 			// report.endTest(logger);
 			// report.flush();
 		} catch (AssertionError e) {
@@ -104,7 +103,7 @@ public class SendMail extends StartBrowser {
 			File f2 = new File(destfilename);
 			System.out.println(f2);
 			FileUtils.copyFile(f1, f2);
-			logger.log(LogStatus.FAIL, "Mail not sent. Screenshot attached.");
+			logger1.log(LogStatus.FAIL, "Mail not sent. Screenshot attached.");
 
 		}
 

@@ -8,52 +8,51 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import com.gmail.constants.Standard;
-import com.gmail.utility.ExcelUtils;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class StartBrowser {
+	
 	public ResourceBundle rb;
 	public static WebDriver driver;
 	public static ExtentReports report;
-	public static ExtentTest logger;
+	public static ExtentTest logger1;
 	public static WebDriverWait wait;
 
 	@BeforeSuite(alwaysRun = true)
 	public void getDriver() throws Exception {
-		logger = report.startTest("getDriver");
+		
 		//Set path for Report file
 		report = new ExtentReports(".\\Report\\ExtentReport.html");
-		logger.log(LogStatus.PASS,"Path set for Report file.");
+		logger1 = report.startTest("getDriver");
+		logger1.log(LogStatus.PASS,"Path set for Report file.");
 		
 		//Set Excel file path and file Name
-        ExcelUtils.setExcelFile(Standard.Path_TestData + Standard.File_TestData,"Sheet1");
-        logger.log(LogStatus.PASS,"Path set for Excel file.");
-		
+        //ExcelUtils.setExcelFile(Standard.Path_TestData + Standard.File_TestData,"Sheet1");
+        logger1.log(LogStatus.PASS,"Path set for Excel file.");
 		rb = ResourceBundle.getBundle(Standard.CONFIG_PROPERTY_FILENAME);
 		if (Standard.CHROME_BROWSER.equals(rb.getString(Standard.BROWSER))) {
 			System.setProperty(Standard.CHROME_DRIVER, Standard.CHROME_DRIVER_PATH);
 			driver = new ChromeDriver();
-			logger.log(LogStatus.PASS, "getDriver Before Suite Passed.");
-			report.endTest(logger);
+			logger1.log(LogStatus.PASS, "getDriver Before Suite Passed.");
+			report.endTest(logger1);
 			report.flush();
 
 		}
-		// return driver;
 	}
 
 	@BeforeTest(alwaysRun = true)
 	public void openBrowser() {
-		logger = report.startTest("openBrowser");
+		logger1 = report.startTest("openBrowser");
 		driver.get(rb.getString(Standard.URL));
 		// To refresh the web page
 		driver.get(driver.getCurrentUrl());
 		driver.manage().window().maximize();
-		logger.log(LogStatus.INFO, "Url is opened and window is maximized.");
+		logger1.log(LogStatus.INFO, "Url is opened and window is maximized.");
 		Assert.assertTrue(true);
-		logger.log(LogStatus.PASS, "openBrowser Before Test Passed.");
-		report.endTest(logger);
+		logger1.log(LogStatus.PASS, "openBrowser Before Test Passed.");
+		report.endTest(logger1);
 		report.flush();
 	}
 

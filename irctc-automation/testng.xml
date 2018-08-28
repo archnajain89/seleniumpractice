@@ -8,7 +8,7 @@
 <groups>
         <!--   <define name="all"> -->
         <run>
-             	<include name="T1"/>    
+             	<!-- <include name="T1"/>    --> 
        			<include name="T2"/> 
        			<!-- <include name="T3"/> --> 
          <!--  </define> -->	
@@ -17,8 +17,8 @@
  </groups>
  		<classes>		
 			 <!-- <class name="com.gmail.login.Login"/> -->
-			 <class name="com.gmail.login.LoginExcel"/> 
- 			 <class name="com.gmail.mail.SendMail" />
+			 <class name="com.gmail.login.LoginExcel"/>
+ 			 <!-- <class name="com.gmail.mail.SendMail" /> -->
  			 <class name="com.gmail.mail.DeleteSentMail" />
 			<!-- <class name="com.gmail.logout.Logout" /> -->
 		</classes>			

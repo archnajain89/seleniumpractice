@@ -16,7 +16,7 @@ public class DeleteSentMail extends StartBrowser {
 		try{	
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locators.SENT_BTN)));
 		driver.findElement(By.xpath(Locators.SENT_BTN)).click();
-		logger.log(LogStatus.PASS, "Sent link clicked.");
+		logger1.log(LogStatus.PASS, "Sent link clicked.");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locators.SELECT_ALL_SENTMAILS)));
 		WebElement Select_Mails = driver.findElement(By.xpath(Locators.SELECT_ALL_SENTMAILS));
 		//Select all sent mails 
@@ -31,12 +31,12 @@ public class DeleteSentMail extends StartBrowser {
 			String actual_message = No_mails.getText();
 			String expected_message = "No sent messages! ";
 			Assert.assertEquals(actual_message, expected_message);
-			logger.log(LogStatus.PASS,"No mails present in Sent Mail.");			
+			logger1.log(LogStatus.PASS,"No mails present in Sent Mail.");			
 		} else {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.DELETE_SENT_MAILS)));
 			driver.findElement(By.xpath(Locators.DELETE_SENT_MAILS)).click();
 			Thread.sleep(3000);
-			logger.log(LogStatus.PASS,"All sent mails are deleted.");
+			logger1.log(LogStatus.PASS,"All sent mails are deleted.");
 			Thread.sleep(3000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.DELETE_SENT_MSG)));
 			WebElement Delete_msg = driver.findElement(By.xpath(Locators.DELETE_SENT_MSG));
