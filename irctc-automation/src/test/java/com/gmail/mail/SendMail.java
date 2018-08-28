@@ -64,7 +64,7 @@ public class SendMail extends StartBrowser {
 		wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(Locators.ATTACHMENT_LINK))));
 		driver.findElement(By.xpath(Locators.ATTACHMENT_LINK)).click();
 		// Code of AUTOIT tool for attaching file.
-		Runtime.getRuntime().exec("D:\\my_data\\data\\uploadfile.exe");
+		Runtime.getRuntime().exec("C:\\Users\\arrchnnajaiin\\Downloads\\uploadfile.exe");
 		Thread.sleep(5000);
 		logger.log(LogStatus.PASS, "Attachment completed");
 	}

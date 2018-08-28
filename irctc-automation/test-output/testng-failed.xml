@@ -12,13 +12,13 @@
       </run>
     </groups>
     <classes>
-      <class name="com.gmail.login.Login">
+      <class name="com.gmail.mail.SendMail">
         <methods>
           <include name="getDriver"/>
           <include name="openBrowser"/>
-          <include name="login"/>
+          <include name="composeMailAttachment"/>
         </methods>
-      </class> <!-- com.gmail.login.Login -->
+      </class> <!-- com.gmail.mail.SendMail -->
     </classes>
   </test> <!-- Gmail Login(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -26,8 +26,7 @@ public class ListenerTest extends StartBrowser implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		// System.out.println("The name of the testcase failed is
-		// :"+result.getName());
+		System.out.println("The name of the testcase failed is: "+result.getName());
 		if (ITestResult.FAILURE == result.getStatus()) {
 			logger.log(LogStatus.FAIL, "Failed test case is " + result.getName());
 			// logger.log(LogStatus.FAIL, "Test Case Failed is " +
