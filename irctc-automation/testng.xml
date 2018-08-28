@@ -16,7 +16,8 @@
  </run>        
  </groups>
  		<classes>		
-			 <class name="com.gmail.login.Login"/>
+			 <!-- <class name="com.gmail.login.Login"/> -->
+			 <class name="com.gmail.login.LoginExcel"/> 
  			 <class name="com.gmail.mail.SendMail" />
  			 <class name="com.gmail.mail.DeleteSentMail" />
 			<!-- <class name="com.gmail.logout.Logout" /> -->

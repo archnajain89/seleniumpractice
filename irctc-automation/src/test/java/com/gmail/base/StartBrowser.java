@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import com.gmail.constants.Standard;
+import com.gmail.utility.ExcelUtils;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -20,10 +21,16 @@ public class StartBrowser {
 	public static WebDriverWait wait;
 
 	@BeforeSuite(alwaysRun = true)
-	public void getDriver() {
-
-		report = new ExtentReports(".\\Report\\ExtentReport.html");
+	public void getDriver() throws Exception {
 		logger = report.startTest("getDriver");
+		//Set path for Report file
+		report = new ExtentReports(".\\Report\\ExtentReport.html");
+		logger.log(LogStatus.PASS,"Path set for Report file.");
+		
+		//Set Excel file path and file Name
+        ExcelUtils.setExcelFile(Standard.Path_TestData + Standard.File_TestData,"Sheet1");
+        logger.log(LogStatus.PASS,"Path set for Excel file.");
+		
 		rb = ResourceBundle.getBundle(Standard.CONFIG_PROPERTY_FILENAME);
 		if (Standard.CHROME_BROWSER.equals(rb.getString(Standard.BROWSER))) {
 			System.setProperty(Standard.CHROME_DRIVER, Standard.CHROME_DRIVER_PATH);

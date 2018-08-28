@@ -14,6 +14,8 @@ public class Standard {
 	public static final String SUBJECTS_NAME = "Test Mail";
 	public static final String BODY_TEXT = "Hi, This is the mail send via automation scripts.";
 	public static final String EXPECTED_MSG = "Message sent.";
+	public static final String Path_TestData = "D:\\TestData\\";
+	public static final String File_TestData = "testdata.xlsx";
 	
 	
 }
