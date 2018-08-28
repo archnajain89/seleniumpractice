@@ -2,28 +2,49 @@
 <testng-results skipped="0" failed="1" ignored="2" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="11595" started-at="2018-08-28T13:51:24Z" finished-at="2018-08-28T13:51:36Z">
+  <suite name="Suite" duration-ms="144123" started-at="2018-08-28T14:08:00Z" finished-at="2018-08-28T14:10:24Z">
     <groups>
       <group name="T2">
-        <method signature="DeleteSentMail.deleteSentMail()[pri:5, instance:com.gmail.mail.DeleteSentMail@675d3402]" name="deleteSentMail" class="com.gmail.mail.DeleteSentMail"/>
-        <method signature="LoginExcel.login1()[pri:1, instance:com.gmail.login.LoginExcel@2a2d45ba]" name="login1" class="com.gmail.login.LoginExcel"/>
+        <method signature="DeleteSentMail.deleteSentMail()[pri:5, instance:com.gmail.mail.DeleteSentMail@3c419631]" name="deleteSentMail" class="com.gmail.mail.DeleteSentMail"/>
+        <method signature="LoginExcel.login1()[pri:1, instance:com.gmail.login.LoginExcel@6f96c77]" name="login1" class="com.gmail.login.LoginExcel"/>
       </group> <!-- T2 -->
     </groups>
-    <test name="Gmail Login" duration-ms="11595" started-at="2018-08-28T13:51:24Z" finished-at="2018-08-28T13:51:36Z">
+    <test name="Gmail Login" duration-ms="144123" started-at="2018-08-28T14:08:00Z" finished-at="2018-08-28T14:10:24Z">
       <class name="com.gmail.login.LoginExcel">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.gmail.login.LoginExcel@2a2d45ba]" name="getDriver" is-config="true" duration-ms="3251" started-at="2018-08-28T19:21:21Z" finished-at="2018-08-28T19:21:24Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.gmail.login.LoginExcel@6f96c77]" name="getDriver" is-config="true" duration-ms="97691" started-at="2018-08-28T19:36:23Z" finished-at="2018-08-28T19:38:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.gmail.login.LoginExcel@2a2d45ba]" name="openBrowser" is-config="true" duration-ms="7119" started-at="2018-08-28T19:21:24Z" finished-at="2018-08-28T19:21:31Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.gmail.login.LoginExcel@6f96c77]" name="openBrowser" is-config="true" duration-ms="19162" started-at="2018-08-28T19:38:00Z" finished-at="2018-08-28T19:38:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="login1()[pri:1, instance:com.gmail.login.LoginExcel@2a2d45ba]" name="login1" duration-ms="4411" started-at="2018-08-28T19:21:31Z" finished-at="2018-08-28T19:21:36Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="PASS" signature="login1()[pri:1, instance:com.gmail.login.LoginExcel@6f96c77]" name="login1" duration-ms="49101" started-at="2018-08-28T19:38:20Z" finished-at="2018-08-28T19:39:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login1 -->
+      </class> <!-- com.gmail.login.LoginExcel -->
+      <class name="com.gmail.mail.DeleteSentMail">
+        <test-method status="FAIL" signature="deleteSentMail()[pri:5, instance:com.gmail.mail.DeleteSentMail@3c419631]" name="deleteSentMail" duration-ms="49746" started-at="2018-08-28T19:39:17Z" finished-at="2018-08-28T19:40:06Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@data-tooltip='Delete'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T15:15:08.936Z'
+System info: host: 'BHAVNAWKS086', ip: '192.168.0.96', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\ARRCHN~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}
+Session ID: c798953e675303879d412c6eea9aea16]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.gmail.login.LoginExcel.login1(LoginExcel.java:31)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@data-tooltip='Delete'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T15:15:08.936Z'
+System info: host: 'BHAVNAWKS086', ip: '192.168.0.96', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\ARRCHN~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}
+Session ID: c798953e675303879d412c6eea9aea16
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at com.gmail.mail.DeleteSentMail.deleteSentMail(DeleteSentMail.java:36)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,13 +72,7 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login1 -->
-      </class> <!-- com.gmail.login.LoginExcel -->
-      <class name="com.gmail.mail.DeleteSentMail">
-        <test-method status="PASS" signature="deleteSentMail()[pri:5, instance:com.gmail.mail.DeleteSentMail@675d3402]" name="deleteSentMail" duration-ms="4" started-at="2018-08-28T19:21:36Z" finished-at="2018-08-28T19:21:36Z">
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteSentMail -->

@@ -11,13 +11,13 @@
       </run>
     </groups>
     <classes>
-      <class name="com.gmail.login.LoginExcel">
+      <class name="com.gmail.mail.DeleteSentMail">
         <methods>
           <include name="getDriver"/>
           <include name="openBrowser"/>
-          <include name="login1"/>
+          <include name="deleteSentMail"/>
         </methods>
-      </class> <!-- com.gmail.login.LoginExcel -->
+      </class> <!-- com.gmail.mail.DeleteSentMail -->
     </classes>
   </test> <!-- Gmail Login(failed) -->
 </suite> <!-- Failed suite [Suite] -->

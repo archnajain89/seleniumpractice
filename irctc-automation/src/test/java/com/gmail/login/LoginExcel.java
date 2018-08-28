@@ -14,7 +14,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class LoginExcel extends StartBrowser{
 	@Test(priority = 1, groups = { "T2" })
-	public void login1() throws Exception {
+	public void loginExcel() throws Exception {
 		
 		// Enter userid in textbox from excel file
 		String Username=ExcelUtils.getCelldata(1,1);

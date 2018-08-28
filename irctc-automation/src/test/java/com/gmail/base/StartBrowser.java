@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import com.gmail.constants.Standard;
+import com.gmail.utility.ExcelUtils;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -29,7 +30,7 @@ public class StartBrowser {
 		logger1.log(LogStatus.PASS,"Path set for Report file.");
 		
 		//Set Excel file path and file Name
-        //ExcelUtils.setExcelFile(Standard.Path_TestData + Standard.File_TestData,"Sheet1");
+        ExcelUtils.setExcelFile(Standard.Path_TestData + Standard.File_TestData,"Sheet1");
         logger1.log(LogStatus.PASS,"Path set for Excel file.");
 		rb = ResourceBundle.getBundle(Standard.CONFIG_PROPERTY_FILENAME);
 		if (Standard.CHROME_BROWSER.equals(rb.getString(Standard.BROWSER))) {
